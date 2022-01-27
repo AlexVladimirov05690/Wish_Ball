@@ -1,17 +1,26 @@
 import java.util.Random;
 
 public class Wish_Ball extends Thread {
-    String[] prediction_list = {"It is certain (Бесспорно)", "It is decidedly so (Предрешено)", "Without a doubt (Никаких сомнений)",
-            "Yes — definitely (Определённо да)", "You may rely on it (Можешь быть уверен в этом)", "As I see it, yes (Мне кажется — «да»)",
-            "Most likely (Вероятнее всего)", "Outlook good (Хорошие перспективы)", "Signs point to yes (Знаки говорят — «да»)", "Yes (Да)",
-            "Reply hazy, try again (Пока не ясно, попробуй снова)", "Ask again later (Спроси позже)", "Better not tell you now (Лучше не рассказывать)", "Cannot predict now (Сейчас нельзя предсказать)",
-            "Concentrate and ask again (Сконцентрируйся и спроси опять)", "Don’t count on it (Даже не думай)", "My reply is no (Мой ответ — «нет»)", "My sources say no (По моим данным — «нет»)",
-            "Outlook not so good (Перспективы не очень хорошие)", "Very doubtful (Весьма сомнительно)"};
-    int answer = 0;
+    String[] prediction_list = {"Бесспорно", "Предрешено", "Никаких сомнений",
+            "Определённо да", "Можешь быть уверен в этом", "Мне кажется — «да»",
+            "Вероятнее всего", "Хорошие перспективы", "Знаки говорят — «да»", "Да",
+            "Пока не ясно, попробуй снова", "Спроси позже", "Лучше не рассказывать", "Сейчас нельзя предсказать",
+            "Сконцентрируйся и спроси опять", "Даже не думай", "Мой ответ — «нет»", "По моим данным — «нет»",
+            "Перспективы не очень хорошие", "Весьма сомнительно"};
+
+    private int answer = 0;
+
+    public String getAnswer() {
+        return prediction_list[answer];
+    }
+
+
+    Random random = new Random();
+
     @Override
     public void run() {
         while (true) {
-            answer = 
+            answer = random.nextInt(19);
         }
     }
 }
